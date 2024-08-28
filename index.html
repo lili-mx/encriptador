@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <img class="header_logo" src="./assets/Logo.png" alt="Logo Alura">
+        </nav>
+    </header>
+    <main class="main">
+        <section id="column_left">
+            <form>
+                <textarea id="textarea_encriptar" placeholder="Ingrese el texto aquí" onchange="validateRegex()"></textarea>
+                <p class="tooltip_text">Solo letras minúsculas y sin acentos</p>
+                <input type="button" value="Encriptar" id="button_encriptar" class="button" onclick="encriptar()">
+                <input type="button" value="Desencriptar" id="button_desencriptar" class="button" onclick="desencriptar()">
+                <input type="button" value="Limpiar" class="button" onclick="limpiar()">
+            </form>
+        </section>
+        <section id="column_right">
+            <div id="div_noMessage">
+                <img class="img_noFound" src="./assets/noFound.png" alt="Imagen mensaje no encontrado">
+                <p class="column_right_title">Ningún mensaje fue encontrado</p>
+                <p class="column_right_subtitle">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div id="div_showMessage">
+                <p id="div_encript_text"></p>
+            </div>
+
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Desarrollado por Lili Martinez</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
